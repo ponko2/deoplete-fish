@@ -22,7 +22,7 @@ class Source(Base):
         return m.start() if m else -1
 
     def gather_candidates(self, context):
-        globs = globruntime(context['runtimepath'], 'bin/complete.fish')
+        globs = globruntime(self.vim.options['runtimepath'], 'bin/complete.fish')
 
         if not self.__executable_fish or not globs or not context['input']:
             return []
