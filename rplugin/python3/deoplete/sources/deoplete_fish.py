@@ -13,7 +13,7 @@ class Source(Base):
         self.name = 'fish'
         self.mark = '[fish]'
         self.filetypes = ['fish']
-        self.input_pattern = '[^. \t0-9]\.\w*'
+        self.input_pattern = r'[^. \t0-9]\.\w*'
         self.rank = 500
         self.__executable_fish = self.vim.call('executable', 'fish')
 
